@@ -19,7 +19,6 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-
     double num = 1, den = 1;
     for (uint16_t i = 1; i <= n; ++i) {
         num *= x;
@@ -29,7 +28,6 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-
     double s = 1, c = 1;
     for (uint16_t i = 1; i <= count; ++i) {
         c *= x / i;
@@ -39,7 +37,6 @@ double expn(double x, uint16_t count) {
 }
 
 double sinn(double x, uint16_t count) {
-
     double s = x, c = x;
     for (uint16_t i = 1; i <= count; ++i) {
         c *= -1 * x * x / (2 * i) / (2 * i + 1);
@@ -49,7 +46,6 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-
     double c = 1.0;
     for (int i = 2; i <= count; ++i) {
         c += pown(-1, i - 1) * calcItem(x, i * 2 - 2);
